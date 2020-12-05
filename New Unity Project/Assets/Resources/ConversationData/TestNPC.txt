@@ -1,0 +1,5 @@
+topic	firstTopic	False
+des	This is the test NPC, they look quizzical
+response	firstTopic	Lets unlock this second topic shall we	secondTopic	False
+topic	secondTopic	True
+response	secondTopic	Woo! You unlocked the topic	 	False

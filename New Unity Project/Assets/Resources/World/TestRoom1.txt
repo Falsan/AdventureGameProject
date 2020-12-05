@@ -1,0 +1,8 @@
+nam	TestRoom1
+des	This is test room number one. It's a silly room filled with stuff
+dir	North	TestRoom2
+npc	TestNPC
+has	TestItem	true
+dor	TestLockedDoor	true	TestRoom2
+use	TestLockedDoor	TestItem	You create a new test item placed in your inventory	item	NewTestItem
+START
