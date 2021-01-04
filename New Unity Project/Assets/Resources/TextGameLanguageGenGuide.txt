@@ -1,0 +1,39 @@
+Each file in the World folder will be a seperate scene.
+
+Inside the file will be multiple records, with the type decided by the first entry of the record.
+
+The types of records are
+
+scn
+cta
+
+An scn record is the main record for each scene. It is structured as follows.
+
+type|scene name|scene text
+
+Scene name acts as a unique identifier as it is not shown anywhere
+
+A cta record is a context action for the scene. It is structured as follows.
+
+type|context action id|context action name|position in the UI|action this performs if any|scene this results in|scene this results in if check fails
+
+Context action id acts as a unique identifier in the context of a scene. Context action name is the name of the context action shown in the UI
+
+Names of scenes are the name of the scene in their given scene record
+
+The actions a context action can perform are as follows.
+
+UpdateWorld
+UpdatePlayer
+CheckWorld
+CheckPlayer
+
+Examples of their use are as follows
+
+UpdateWorld,NPCRelationRank=1 will set the NPC relation rank to 1
+UpdatePlayer,PlayerStrength+1 will add 1 to the player's strength variable
+
+CheckWorld,NPCRelationRank,>,2 will check to see if the NPCRelationRank is greater than 2, if it is less, it will result in the fail scene
+CheckPlayer,PlayerStrength,=,1 will check to see if the player strength matches 1, otherwise it will result in the fail scene
+
+Context actions are assosiated with a scene. There can be many CTA records in a file, but only one SCN record.

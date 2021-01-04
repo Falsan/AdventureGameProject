@@ -1,3 +1,0 @@
-nam	TestRoom2
-des	This is test room number two. It's a silly room filled with stuff
-dir	North	TestRoom1

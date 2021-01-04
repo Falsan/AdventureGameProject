@@ -63,11 +63,11 @@ public class PlayerInteractionScript : MonoBehaviour {
 
         for (int iter = 0;  iter < worldObjects.Length; iter++)
         {
-            if(worldObjects[iter].GetComponent<WorldObjectDescriptionScript>().GetName() == name)
-            {
-                activeWorldObject = worldObjects[iter];
-                activeWorldObject.GetComponent<WorldObjectDescriptionScript>().SendRoomDescriptionToPrint();
-            }
+    //        if(worldObjects[iter].GetComponent<WorldObjectDescriptionScript>().GetName() == name)
+    //        {
+    //            activeWorldObject = worldObjects[iter];
+    //            activeWorldObject.GetComponent<WorldObjectDescriptionScript>().SendRoomDescriptionToPrint();
+    //        }
         }
     }
 	

@@ -26,7 +26,7 @@ public class EndConsoleEntryScript : MonoBehaviour {
         if (Input.GetKey(KeyCode.Return))
         {
 
-            ConsoleEventManager.instance.ParseNewCommand(latestCommand);
+        //    ConsoleEventManager.instance.ParseNewCommand(latestCommand);
 
             console.Select();
             console.ActivateInputField();
