@@ -11,6 +11,7 @@ public class ContextActionScript : MonoBehaviour
     private string failureScene;
     private string actionToDo; //this will be what kind of action we are doing, either a comparison, assignment or increment
     private string variableToCheck; //this will be the variable, player or world, we are checking or incrementing
+    private string operation; //the operation we are comparing/assigning with
     private string valueToCheck; //this will be the value we are checking it is or assigning
 
     private ActiveSceneManager sceneManager; //reference to the scene manager
@@ -51,14 +52,41 @@ public class ContextActionScript : MonoBehaviour
 
             actionToDo = actionSections[0];
             variableToCheck = actionSections[1];
-            valueToCheck = actionSections[2];
+            operation = actionSections[2];
+            valueToCheck = actionSections[3];
         }
     }
 
     public void TriggerContextAction()
     {
-        //We'll need to write in some behaviour here about how we select the scene to send over, but we need the world and player state stuff to do that so for now we'll just yeet the success scene name across
+        //We'll basically this chooses whether we do a success or fail scene, the default is just to succeed, we don't need to put in a fail condition for ever scene change
 
-        sceneManager.TriggerSceneChange(successfulScene); //yeet!
+        bool successOrFail = true;
+
+        if (actionToDo == "UpdateWorld")
+        {
+            WorldStatusScript.instance.UpdateWorldStatus(variableToCheck, operation, valueToCheck);
+        }
+        else if (actionToDo == "UpdatePlayer")
+        {
+            PlayerStatusScript.instance.UpdatePlayerStatus(variableToCheck, operation, valueToCheck);
+        }
+        else if (actionToDo == "CheckWorld")
+        {
+            successOrFail = WorldStatusScript.instance.CheckWorldStatus(variableToCheck, operation, valueToCheck);
+        }
+        else if (actionToDo == "CheckPlayer")
+        {
+            successOrFail = PlayerStatusScript.instance.CheckPlayerStatus(variableToCheck, operation, valueToCheck);
+        }
+
+        if (successOrFail)
+        {
+            sceneManager.TriggerSceneChange(successfulScene); //yeet!
+        }
+        else
+        {
+            sceneManager.TriggerSceneChange(failureScene); //yeet!
+        }
     }
 }

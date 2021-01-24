@@ -30,8 +30,8 @@ CheckPlayer
 
 Examples of their use are as follows
 
-UpdateWorld,NPCRelationRank=1 will set the NPC relation rank to 1
-UpdatePlayer,PlayerStrength+1 will add 1 to the player's strength variable
+UpdateWorld,NPCRelationRank,=,1 will set the NPC relation rank to 1
+UpdatePlayer,PlayerStrength,+,1 will add 1 to the player's strength variable
 
 CheckWorld,NPCRelationRank,>,2 will check to see if the NPCRelationRank is greater than 2, if it is less, it will result in the fail scene
 CheckPlayer,PlayerStrength,=,1 will check to see if the player strength matches 1, otherwise it will result in the fail scene
