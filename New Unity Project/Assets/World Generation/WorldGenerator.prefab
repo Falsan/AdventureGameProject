@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7440447891912954401}
   - component: {fileID: 7440447891912954414}
   - component: {fileID: 7957222457806026051}
+  - component: {fileID: 2611162031276481123}
+  - component: {fileID: -2634439846011726637}
   m_Layer: 0
   m_Name: WorldGenerator
   m_TagString: Scene Manager
@@ -56,5 +58,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7a676dcaa11af48ba55e9817d8443e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2611162031276481123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7440447891912954415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d36ea0975a2264bb4b21ddd70edac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2634439846011726637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7440447891912954415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8786947fe35804d9cafc2fa93617cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
