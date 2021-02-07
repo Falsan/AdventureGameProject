@@ -16,10 +16,13 @@ public class ContextActionScript : MonoBehaviour
 
     private ActiveSceneManager sceneManager; //reference to the scene manager
 
+    private ContextActionButton[] buttons;
+
     // Start is called before the first frame update
     void Start()
     {
         sceneManager = GameObject.FindGameObjectWithTag("Scene Manager").GetComponent<ActiveSceneManager>(); //we're assuming here that there will be a scene manager in the scene to trigger this behaviour
+        buttons = FindObjectsOfType<ContextActionButton>();
     }
 
     // Update is called once per frame
@@ -54,6 +57,21 @@ public class ContextActionScript : MonoBehaviour
             variableToCheck = actionSections[1];
             operation = actionSections[2];
             valueToCheck = actionSections[3];
+        }
+    }
+
+    public void AssignContextActionToUiButton()
+    {
+        if(buttons == null) //catch because this can be null at start
+        {
+            buttons = FindObjectsOfType<ContextActionButton>();
+        }
+        foreach (ContextActionButton button in buttons)
+        {
+            if (button.contextActionNumber == UIPosition)
+            {
+                button.BindContextActionToButton(this, contextActionName);
+            }
         }
     }
 

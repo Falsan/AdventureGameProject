@@ -36,6 +36,18 @@ public class WorldGenerationScript : MonoBehaviour {
             fullName.Replace("\\", "/");
             CreateSceneObject(fullName);
         }
+
+  //      SceneObjectScript[] sceneObjects = FindObjectsOfType<SceneObjectScript>(); //i hate everything about this but it's 10pm, change later
+  //
+  //      foreach(SceneObjectScript sceneObject in sceneObjects)
+   //     {
+     //       if (sceneObject.GetActiveScene())
+    //        {
+     //           sceneObject.SetActiveScene(true);
+       //     }
+        //}
+
+        ActiveSceneManager.instance.SetUpAllSceneObjectsInList();
     }
 
     void CreateSceneObject(string sceneFile)
@@ -107,6 +119,7 @@ public class WorldGenerationScript : MonoBehaviour {
             if (doWork == true)
             {
                 sceneObject.AddComponent<ContextActionScript>();
+                sceneObject.GetComponent<SceneObjectScript>().AssignContextActionsToScene(); //this is messy grr!
             }
 
             contextActions = sceneObject.GetComponents<ContextActionScript>();

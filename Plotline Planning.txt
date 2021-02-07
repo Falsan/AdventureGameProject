@@ -1,0 +1,15 @@
+Act 1
+
+Act 1 involves a prison escape from a dark elven internment camp. The main character is defined from a selection of backgrounds at game start but ends up in the camp nonetheless.
+
+On wake, the dark elf Levra will greet the player and tease them. Depending on their performance this can result in two scenes. Either one where the player is disciplined or left alone. This establishes Levra as a primary antagonist
+
+This allows the player into the camp instance where they can move around scenes freely. Each major interaction with the camp dwellers or work will tick off an abstract time unit. If they run out then the player will get a scene
+where they are herded back to their cell.
+
+=============
+
+Camp
+
+Work activity in the camp should need to be done each day at least once, trains a random player stat. If not, then it results in a punishment scene at night
+
